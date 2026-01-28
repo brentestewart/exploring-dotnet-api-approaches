@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "StockTicker.Server";
+
+// The greeting service definition.
+service StockTickerService {
+  // Sends a greeting
+  rpc Subscribe (StockRequest) returns (stream StockUpdate);
+}
+
+// The request message containing the user's name.
+message StockRequest {
+  repeated string symbols = 1;
+}
+
+// The response message containing the greetings.
+message StockUpdate {
+  string symbol = 1;
+  double price = 2;
+  int64 timestamp = 3;
+}

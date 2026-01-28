@@ -1,0 +1,171 @@
+---
+title: Exploring API<br/>Approaches in .NET
+subtitle: When all you have is a hammer...
+format:
+  revealjs:
+    theme: simple
+    slide-number: false
+    incremental: true
+css: custom.css
+
+---
+
+## What is an API?
+
+- Application Programming Interface 
+- A way for software to ask another system to do something or provide data
+- Defines the interface that callers use, separating usage from implementation details.
+- Analogy: **C# interface** — describes just the behavior without implementation
+
+---
+
+## What an API is NOT
+
+- Not just HTTP
+- Not just JSON
+- Not always public or external
+- Not always synchronous or request/response
+
+---
+
+## Why Use APIs
+
+- Separation of concerns
+- Allow internal changes without breaking consumers
+- Enable reuse across multiple clients
+- Create natural team and system boundaries
+- Support distribution and scaling
+
+---
+
+## Legacy API Technologies
+
+| Technology | Introduced |
+|------------|------------|
+| COM / DCOM | Pre-.NET / 1990s |
+| ASMX Web Services (SOAP) | .NET 1.0 / 2002 |
+| .NET Remoting | .NET 1.0 / 2002 |
+| WCF | .NET 3.0 / 2006 |
+
+---
+
+## Modern API Options
+
+| Technology | Introduced |
+|------------|------------|
+| Controller-based APIs | Framework 4.5 |
+| SignalR (Real-time) | ASP.NET Core 2.0 |
+| OData | ~ASP.NET Core 3 |
+| gRPC | .NET Core 3.0 |
+| Azure Functions | 2016–2017 |
+| Minimal APIs | .NET 6 |
+| Message-based APIs | 2004–2018 |
+
+---
+
+## Controller-based APIs
+
+- Structured, controller-centric API model
+- Built on **ASP.NET Core MVC**
+- Uses attributes for routing (`[HttpGet]`, `[HttpPost]`, etc.)
+- Explicit request/response handling
+
+---
+
+## Controller-based APIs (When / Why to Use)
+
+- CRUD-heavy APIs
+- Larger teams or long-lived services
+- APIs needing cross-cutting features (auth, logging, validation)
+- When you want **structure and discoverability**
+
+---
+
+## Controller-based APIs
+
+**Demo Time!**
+
+---
+
+## Minimal APIs
+
+- Lightweight API model introduced in **.NET 6**
+- No controllers; routes defined directly in `Program.cs`
+- Quick to spin up endpoints for simple services
+- Focused on **simplicity and speed**
+
+---
+
+## Minimal APIs<br/>(When / Why to Use)
+
+- Small services or microservices
+- Prototyping or experiments
+- When you don’t need full MVC structure
+- Easy to integrate with minimal ceremony
+
+---
+
+## Minimal APIs
+
+**Demo Time!**
+
+---
+
+## gRPC
+
+- High-performance RPC framework
+- Contract-first: messages and services defined in `.proto` files
+- Uses HTTP/2 for streaming and efficiency
+- Strongly typed, ideal for inter-service communication
+
+---
+
+## gRPC<br/>(When / Why to Use)
+
+- Microservices communication
+- Real-time streaming between services
+- Low-latency, high-throughput scenarios
+- When you need strict contracts and type safety
+
+---
+
+## gRPC
+
+**Demo Time!**
+
+---
+
+## OData
+
+- Enables rich, queryable REST endpoints  
+- Supports `$filter`, `$select`, `$expand`, `$orderby` out of the box  
+- Lets clients control what data they retrieve  
+- Ideal for APIs with complex relationships  
+
+---
+
+## OData<br/>(When / Why to Use)
+
+- APIs where clients need flexible queries  
+- CRUD APIs with complex relationships  
+- When you want to reduce server-side query endpoints  
+- Useful for reporting, dashboards, or client-driven data access  
+
+---
+
+## OData
+
+**Demo Time!**
+
+---
+
+## Thank You!
+
+<div style="font-size:1.2em; margin-top:1em;">
+Slides and Code are available on GitHub: <br>
+<a href="https://github.com/brentestewart" target="_blank" style="color:#FFC870;">https://github.com/brentestewart</a>
+</div>
+
+<div style="font-size:1.2em; margin-top:2em;">
+Questions?
+</div>

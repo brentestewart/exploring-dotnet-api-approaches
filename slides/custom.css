@@ -1,0 +1,135 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Fira+Code&display=swap');
+
+/* Base background and text */
+body, .reveal, .reveal .slides section {
+  background-color: #1E2A47 !important; /* deep slate blue */
+  color: #F8F9FB; /* light text for high contrast */
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  padding: 3rem 4rem 3rem 4rem;
+  box-sizing: border-box;
+}
+
+/* Slide headings */
+.reveal .slides section h1,
+.reveal .slides section h2,
+.reveal .slides section h3 {
+  color: #F8F9FB !important;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+/* Incremental bullets */
+li.fragment {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.4s ease-in-out;
+  color: #FFC870; /* warm accent */
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+li.fragment.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Code blocks */
+pre, code {
+  background: #2E3B55; /* dark code background */
+  color: #F8F9FB;
+  font-family: 'Fira Code', monospace;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  overflow-x: auto;
+  margin: 1em 0;
+  text-align: left;
+}
+
+/* Visual placeholders */
+.placeholder {
+  border: 2px solid #FFC870;
+  border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+  color: #FFC870;
+  font-style: italic;
+  background: #2E3B55;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: 1em 0;
+}
+
+/* Slide numbers / footer */
+.reveal .slide-number {
+  color: #DDDDDD;
+  font-size: 0.9em;
+}
+
+/* Optional: subtle text shadow for readability */
+.reveal .slides section > * {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Lists aligned properly */
+.reveal ul,
+.reveal ol,
+.reveal li {
+  text-align: left;
+}
+
+/* Prevent vertical stretching weirdness */
+.reveal .slides section > * {
+  max-width: 100%;
+}
+
+/* Apply bullet accent color to all table text */
+.reveal table th,
+.reveal table td {
+  color: #FFC870; /* matches your bullets */
+  border: none;   /* remove all other borders */
+}
+
+/* Header styling with a bottom border for separation */
+.reveal table th {
+  font-weight: bold;
+  color: #FFD97F; /* slightly brighter yellow for header */
+  text-align: left;
+  border-bottom: 2px solid #FFC870; /* line between header and body */
+  padding-bottom: 0.3em; /* optional: gives spacing under header */
+}
+
+/* Title font size */
+.quarto-title-block h1.title {
+  font-size: 2.2em;       /* adjust as needed */
+  line-height: 1.2em;   /* optional for multi-line titles */
+  margin-bottom: 0.5em;
+}
+
+/* Subtitle font size */
+.quarto-title-block p.subtitle {
+  font-size: 1.2em;       /* adjust as needed */
+  margin-top: 0;
+}
+
+/* Vertical centering */
+.quarto-title-block.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  height: 100%;
+  text-align: center;
+}
+
+.quarto-title-block.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  height: 100%;
+  text-align: center;      /* ensures text itself is centered */
+}
